@@ -1,4 +1,6 @@
 const inputNuevaTarea = document.querySelector("#nueva-tarea");
+const buscarTarea = document.querySelector("#buscar-tarea");
+const divTareaBuscada = document.querySelector("#tarea-buscada");
 const CLAVE_TAREAS = "tarea";
 
 let listaTareas = "lista vacia";
@@ -11,6 +13,11 @@ function iniciarListaTareas() {
         localStorage.setItem(CLAVE_TAREAS, JSON.stringify(listaTareas));
     }
 
+    listaTareas.forEach(tarea => {
+        document.querySelector("ol").innerHTML += `
+            <li> ${tarea} </li>
+        `; 
+    });
 }
 
 function agregar() {
@@ -25,4 +32,21 @@ function agregar() {
     localStorage.setItem(CLAVE_TAREAS,JSON.stringify(listaTareas) );
 }
 
+function buscar() {
+    let found = false;
+
+    for (let i = 0; i < listaTareas.length && !found; i++) {
+        if (i + 1 === parseInt(buscarTarea.value)) {
+            divTareaBuscada.innerHTML = `<span>Tarea buscada: ${listaTareas[i]}</span>`;
+            found = true;
+        }
+    }
+
+    if (!found) {
+        divTareaBuscada.innerHTML = `<span>Tarea no encontrada</span>`;
+    }
+}
+
+
+/* localStorage.clear() */
 iniciarListaTareas();
