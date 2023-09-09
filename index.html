@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Lista de tareas</h1>
 
-    <input id="nueva-tarea" type="text" placeholder="ingresar tarea">
-    <button onclick="agregar()">Agregar</button>
+    <div id="opciones">
+        <input id="nueva-tarea" type="text">
+        <button onclick="agregar()">Agregar</button>
 
-    <input id="buscar-tarea" type="text" placeholder="numero tarea buscada">
-    <button onclick="buscar()">Buscar</button>
+        <input id="buscar-tarea" type="text">
+        <button onclick="buscar()">Buscar</button>
 
+        <input id="actualizar-tarea" type="text">
+        <button onclick="actualizar()">Actualizar</button>
 
+        <input id="eliminar-tarea" type="text">
+        <button onclick="eliminar()">Eliminar</button>
+
+        <input id="eliminar-lista" type="text">
+        <button onclick="clear()">Eliminar Lista</button>
+    </div>
+    
     <div id="lista-tareas">
         <ol>
 

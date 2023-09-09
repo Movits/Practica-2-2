@@ -47,6 +47,9 @@ function buscar() {
     }
 }
 
+function actualizar() {
+    
+}
 
 /* localStorage.clear() */
 iniciarListaTareas();
