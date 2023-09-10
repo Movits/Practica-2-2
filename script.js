@@ -68,5 +68,9 @@ function eliminar() {
     actualizarLocalStorage();
 }
 
-/* localStorage.clear() */
+function eliminarLista() {
+    localStorage.clear();
+    iniciarListaTareas();
+}
+
 iniciarListaTareas();
