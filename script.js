@@ -3,6 +3,7 @@ const buscarTarea = document.querySelector("#buscar-tarea");
 const divTareaBuscada = document.querySelector("#tarea-buscada");
 const inputActualizarTareaTxt = document.querySelector("#actualizar-tarea-txt");
 const inputActualizarTareaNum = document.querySelector("#actualizar-tarea-num");
+const inputEliminarTarea = document.querySelector("#eliminar-tarea");
 
 const CLAVE_TAREAS = "listaTareas";
 
@@ -56,6 +57,15 @@ function actualizar() {
 
   generarListaTareas();
   actualizarLocalStorage();
+}
+
+function eliminar() {
+    let posEliminarTarea = inputEliminarTarea.value - 1;
+
+    listaTareas.splice(posEliminarTarea, 1);
+
+    generarListaTareas();
+    actualizarLocalStorage();
 }
 
 /* localStorage.clear() */
