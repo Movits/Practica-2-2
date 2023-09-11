@@ -7,34 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Lista de tareas</h1>
+    <div id="contenedor-todo">
+        <div id="opciones">
+            <h1>Lista de tareas</h1>
 
-    <div id="opciones">
-        <input id="nueva-tarea" type="text">
-        <button onclick="agregar()">Agregar Tarea</button><br>
+            <input id="nueva-tarea" type="text">
+            <button onclick="agregar()">Agregar Tarea</button><br>
 
-        <input id="buscar-tarea" type="number">
-        <button onclick="buscar()">Buscar Tarea</button><br>
+            <input id="buscar-tarea" type="number">
+            <button onclick="buscar()">Buscar Tarea</button><br>
 
-        <input id="actualizar-tarea-num" type="number" placeholder="Numero de la Tarea">
-        <input id="actualizar-tarea-txt" type="text" placeholder="Nuevo Texto">
-        <button onclick="actualizar()">Actualizar</button><br>
+            <input id="actualizar-tarea-num" type="number" placeholder="Numero de la Tarea">
+            <input id="actualizar-tarea-txt" type="text" placeholder="Nuevo Texto">
+            <button onclick="actualizar()">Actualizar</button><br>
 
-        <input id="eliminar-tarea" type="number">
-        <button onclick="eliminar()">Eliminar</button>
+            <input id="eliminar-tarea" type="number">
+            <button onclick="eliminar()">Eliminar</button>
 
-        <button onclick="eliminarLista()">Eliminar Lista</button>
-    </div>
+            <button onclick="eliminarLista()">Eliminar Lista</button>
+        </div>
     
-    <div id="lista-tareas">
-        <ol>
-
-        </ol>
-
-        <div id="tarea-buscada">
-            <span>Tarea buscada:</span>
+        <div id="lista-tareas">
+            <div id="tarea-buscada">
+                <span>Tarea buscada:</span>
+            </div>
+        
+            <ol>
+            </ol>
         </div>
     </div>
+    
 
     <script src="script.js"></script>
 </body>

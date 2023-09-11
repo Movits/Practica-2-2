@@ -1,4 +1,48 @@
-#opciones{
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
     display: grid;
-    width: 22vh;
+    place-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#contenedor-todo {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px; /* Provide some space inside the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    width: fit-content; /* This will make the container grow as its content grows */
+}
+
+#opciones {
+    display: grid;
+    width: 33vh;
+    place-content: start;
+    margin-right: 20px; /* Space between #opciones and #lista-tareas */
+}
+
+#lista-tareas {
+    margin-top: 10px;
+    padding: 0;
+    width: 200px;
+    word-wrap: break-word;
+}
+
+#lista-tareas span {
+    word-wrap: break-word;
+    width: 200px;
+}
+
+#lista-tareas span {
+    display: grid;
+    place-content: center;
+}
+
+#opciones > *:first-child,
+#lista-tareas > *:first-child {
+    margin-top: 0;
 }
