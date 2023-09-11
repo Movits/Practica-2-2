@@ -11,18 +11,18 @@ body {
     display: flex;
     align-items: flex-start;
     background-color: #fff;
-    padding: 20px; /* Provide some space inside the container */
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: none;
-    width: fit-content; /* This will make the container grow as its content grows */
+    width: fit-content;
 }
 
 #opciones {
     display: grid;
     width: 33vh;
     place-content: start;
-    margin-right: 20px; /* Space between #opciones and #lista-tareas */
+    margin-right: 20px;
 }
 
 #lista-tareas {
@@ -30,17 +30,17 @@ body {
     padding: 0;
     width: 200px;
     word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 #lista-tareas span {
+    display: block;
     word-wrap: break-word;
-    width: 200px;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
-#lista-tareas span {
-    display: grid;
-    place-content: center;
-}
+
 
 #opciones > *:first-child,
 #lista-tareas > *:first-child {

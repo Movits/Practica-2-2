@@ -45,7 +45,7 @@ function agregar() {
 
 function buscar() {
     divTareaBuscada.innerHTML = `
-        <span>Tarea buscada: ${listaTareas[buscarTarea.value - 1]}</span>
+        <span><strong>Tarea buscada:</strong> ${listaTareas[buscarTarea.value - 1]}</span>
     `;
 }
 
@@ -71,6 +71,8 @@ function eliminar() {
 function eliminarLista() {
     localStorage.clear();
     iniciarListaTareas();
+    divTareaBuscada.innerHTML = `
+        <span><strong>Tarea buscada:</strong></span>`;
 }
 
 iniciarListaTareas();

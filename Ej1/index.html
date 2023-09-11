@@ -11,17 +11,17 @@
         <div id="opciones">
             <h1>Lista de tareas</h1>
 
-            <input id="nueva-tarea" type="text">
+            <input id="nueva-tarea" type="text" placeholder="Texto de la Tarea">
             <button onclick="agregar()">Agregar Tarea</button><br>
 
-            <input id="buscar-tarea" type="number">
+            <input id="buscar-tarea" type="number" placeholder="Numero de la Tarea">
             <button onclick="buscar()">Buscar Tarea</button><br>
 
             <input id="actualizar-tarea-num" type="number" placeholder="Numero de la Tarea">
             <input id="actualizar-tarea-txt" type="text" placeholder="Nuevo Texto">
             <button onclick="actualizar()">Actualizar</button><br>
 
-            <input id="eliminar-tarea" type="number">
+            <input id="eliminar-tarea" type="number" placeholder="Numero de la Tarea">
             <button onclick="eliminar()">Eliminar</button>
 
             <button onclick="eliminarLista()">Eliminar Lista</button>
@@ -29,7 +29,10 @@
     
         <div id="lista-tareas">
             <div id="tarea-buscada">
-                <span>Tarea buscada:</span>
+                <strong>
+                    <span>Tarea buscada:</span>
+                </strong>
+                
             </div>
         
             <ol>

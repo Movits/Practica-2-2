@@ -2,62 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Responsive Registration Form</title>
+    <title>Registro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="registro.css">
 </head>
 <body>
     <div class="container">
-        <div class="title">Registration Form</div>
+        <div class="title">Formulario de Registro</div>
         <form action="">
           
           <div class="account-details">
             <div class="form-group">
-              <label class="form-title" for="">Email</label>
-              <input type="email" placeholder="Enter your email" required>
+              <label class="form-email" for="email">Email</label>
+              <input id="email" type="email" placeholder="Ingrese su email" required>
             </div>
             <div class="form-group">
-              <label class="form-title" for="">Password</label>
-              <input type="password" placeholder="Enter your password" required>
+                <label class="form-contrasena" for="password">Contrasena</label>
+                <input id="password" type="password" placeholder="Ingrese su contrasena" required>
             </div>
             <div class="form-group">
-              <label class="form-title" for="">Confirm Password</label>
-              <input type="password" placeholder="Confirm your password" required>
+                <label class="form-contrasena-confirm" for="passwordConfirm">Confirmacion de Contrasena</label>
+                <input id="passwordConfirm" type="password" placeholder="Confirma su contrasena" required>
             </div>
           </div>
           
           <div class="user-details">
             <div class="form-group">
-              <label class="form-title" for="">First name</label>
-              <input type="text" placeholder="Enter first name" required>
+                <label class="form-nombre" for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Ingrese su nombre" required>
             </div>
             <div class="form-group">
-              <label class="form-title" for="">Middle name</label>
-              <input type="text" placeholder="Enter middle name" required>
+                <label class="form-apellido" for="apellido1">Primer Apellido</label>
+                <input id="apellido1" type="text" placeholder="Ingrese su apellido" required>
             </div>
             <div class="form-group">
-              <label class="form-title" for="">Last name</label>
-              <input type="text" placeholder="Enter last name" required>
+                <label class="form-apellido2" for="apellido2">Segundo Apellido</label>
+                <input id="apellido2" type="text" placeholder="Ingrese su apellido" required>
             </div>
           </div>
           
           <div class="form-radio">
-            <input type="radio" name="gender" id="dot-1">
-            <input type="radio" name="gender" id="dot-2">
-            <label class="form-title">Gender</label>
+            <br><label class="form-title">Genero</label>
             <div class="category">
-              <label for="dot-1">
-                <span class="radio one"></span>
-                <span>Male</span>
-              </label>
-              <label for="dot-2">
-                <span class="radio two"></span>
-                <span>Female</span>
-              </label>
-            </div>
+                <label for="dot-1">
+                    <span>Hombre</span>
+                    <input type="radio" name="gender" id="dot-1" value="Hombre">
+                </label>
+                <label for="dot-2">
+                    <span>Mujer</span>
+                    <input type="radio" name="gender" id="dot-2" value="Mujer">
+                </label>
+                <label for="dot-3">
+                    <span>No Especificado</span>
+                    <input type="radio" name="gender" id="dot-3" value="No especificado" checked> 
+                </label>
+              </div>
           </div>
+          
           <div class="button">
-            <a href="index.html">Registrar</a>
+            <a onclick="guardarInformacion()" href="javascript:void(0)">Registrar</a>
           </div>
         </form>
       </div>
