@@ -20,14 +20,14 @@ function guardarInformacion() {
         apellido2: entradaApellido2.value,
         genero: entradaGenero
     };
-    
+
     const usuariosActuales = JSON.parse(localStorage.getItem('listaUsuarios') || '[]');
     let usuarioYaExiste = false;
 
     for (let i = 0; i < usuariosActuales.length; i++) {
         if (usuariosActuales[i].email === informacionUsuario.email) {
             usuarioYaExiste = true;
-            break; // Exit the loop once a matching email is found
+            break;
         }
     }
 
